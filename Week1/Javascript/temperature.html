@@ -369,7 +369,7 @@
 2016/04/01, 72
 </textarea>
 <canvas id="graph" width="750" height="500"></canvas>
-
+<canvas id="overlay" width="750" height="500"></canvas>
 <script>
 
     // get content from rawdata list
@@ -436,7 +436,7 @@ function createTransform(domain, range){
     ctx.font="20px Arial";
     ctx.fillStyle = "black";
     ctx.fillText("Maximum temperature in De Bilt (NL)",230,20);
-    ctx.stroke()
+    ctx.stroke();
 
     // draw y axis
     ctx.beginPath();
@@ -519,6 +519,35 @@ function createTransform(domain, range){
         ctx.lineTo(x,y);
     }
     ctx.stroke();
+    
+    // write message with mouse coordinates to test 
+    function writeMessage(overlay, message) {
+        var context = overlay.getContext('2d');
+        context.clearRect(0, 0, overlay.width, overlay.height);
+        context.font = "12pt arial";
+        context.fillStyle = "black";
+        context.fillText(message, 5, 20);
+      }
+      // create an overlay with the mouse position
+      function getMousePos(overlay, evt) {
+        var rect = overlay.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+      var overlay = document.getElementById("overlay");
+
+    // eventlistener for the mouse over the canvas
+      overlay.addEventListener("mousemove", function(evt) {
+        var mousePos = getMousePos(overlay, evt);
+        var message = "Mouse position: " + mousePos.x + "," + mousePos.y;
+        writeMessage(overlay, message);
+      }, false);
+            
+        
+               
+            
     
 </script>
 <style type="text/css">
