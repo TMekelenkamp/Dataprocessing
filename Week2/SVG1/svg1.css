@@ -1,0 +1,22 @@
+/*Thom Mekelenkamp*/
+/* continent color */
+.continent
+{
+
+}
+
+ country colors 
+.ch
+{
+  fill: blue;
+}
+
+.fr
+{
+    fill: red;
+}
+
+.es
+{
+    fill: yellow;
+}

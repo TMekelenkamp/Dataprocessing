@@ -1,0 +1,53 @@
+Thom Mekelenkamp
+
+1. D3 is and array of nodes which are part of the dom element. The arrays have  
+    various methods on them which make you able to get and use data from the
+    dom element
+
+    select preserves the existing grouping, whereas selectAll creates a new grouping. 
+    Calling select thus preserves the data, index and even the parent node of the original selection.
+
+2. The d represents for the data that is used in the function. if there is an array
+    used/created in the function the i will represent for the index of that array
+    
+3. d3.select("body")
+    .attr("class", "barChart1")
+  .append("div")
+  
+  d3.select("body")
+    .append("svg")
+    .attr("width", 50)
+    .attr("height", 50)
+    
+4.  enter:
+    is used when new data is placed onto the page
+    
+    append:
+    is used to add extra data to a node where which had aleady been
+    created with enter
+    
+    exit:
+    removes all the nodes withing the selection that was made within the 
+    statement
+    
+    update:
+    refers to the existing data to change it when it is "updated"
+    
+5. when using html the bar chart will not be part of the dom, which means that the
+    screen readers will not be able to access it. While using svg it is possible to
+    give the screen readers access which makes it a lot more workable with for example
+    d3.
+    
+6. assuming that the question refers to the simple example on the "let's make a bar chart" page.
+
+d3.select(".chart")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return d * 10 + "px"; })
+    .text(function(d) { return d; });
+    
+    this was the example code to create the simple bar chart. The part that was 
+    appended was the new div. The div will yield the correct information form the 
+    style part below it. That is where it calculates the data to an amount of 
+    pixels for the width of the chart.
