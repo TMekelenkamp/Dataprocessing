@@ -1,11 +1,13 @@
 /*Thom Mekelenkamp*/
 
+/* make up the title */
 h1{
   font-family: Arial;
   font-weight: bold;
   color: steelblue;
 }
 
+/* give the bars a color also for the on hover*/
 rect:hover{
   fill: lightsteelblue;
 }
@@ -13,10 +15,12 @@ rect:hover{
   fill: steelblue;
 }
 
+/* set a custom font*/
 .axis text {
   font: 10px sans-serif;
 }
 
+/* create the axis of the table*/
 .axis path,
 .axis line {
   fill: none;
@@ -24,10 +28,7 @@ rect:hover{
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
-  display: none;
-}
-
+/* create tip*/
 .d3-tip {
   line-height: 1;
   font-weight: bold;
