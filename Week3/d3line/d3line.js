@@ -1,8 +1,14 @@
 // Thom Mekelenkamp
+//
+// var file = "data1.json";
+// function changeData(file){
 
-d3.json("data1.json", function(data1){
+d3.json(file, function(data1){
 
-var data1 = data1.data1;
+// onclick("button2"){
+//   console.log("twente");
+// }
+var data1 = data1.data1
 console.log(data1);
 console.log(data1.date);
 console.log(data1[0].gem);
@@ -157,7 +163,6 @@ function addCrossHair(xCoord, yCoord) {
     d3.select("#crosshair_text")
         .attr("transform", "translate(" + (xCoord + 5) + "," + (yCoord - 5) + ")")
         .text("(" + xScale.invert(xCoord) + " , " + yScale.invert(yCoord) + ")");
-        console.log(("(" + xScale.invert(xCoord) + " , " + yScale.invert(yCoord) + ")"))
-
   }
 });
+// };
