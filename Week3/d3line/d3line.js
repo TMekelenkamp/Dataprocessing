@@ -4,18 +4,6 @@
 var file = "data1.json";
 visual(file);
 
-// functions for changing data
-function bilt(){
-  console.log("De Bilt");
-  file = "data1.json";
-  visual(file);
-}
-function twente(){
-  console.log("Twente");
-  file = "data2.json";
-  visual(file);
-}
-
 // fuction that loads the data and creates the graph
 function visual(file){
   d3.json(file, function(data1){
@@ -73,16 +61,6 @@ function visual(file){
       .x(function(d) { return xScale(formatTime.parse(d.date)); })
       .y(function(d) { return yScale(d.gem); });
 
-  // give the data for the minimum temperature
-  var line2 = d3.svg.line()
-      .x(function(d) { return xScale(formatTime.parse(d.date)); })
-      .y(function(d) { return yScale(d.min); });
-
-  // give the data for the maximum temperature
-  var line3 = d3.svg.line()
-      .x(function(d) { return xScale(formatTime.parse(d.date)); })
-      .y(function(d) { return yScale(d.max); });
-
   // creat the var for the chart
   var chart = d3.select(".chart")
       .attr("width", width + margin.left + margin.right)
@@ -95,18 +73,6 @@ function visual(file){
       .datum(data1)
       .attr("class", "line")
       .attr("d", line);
-
-  // append line2 to the graph
-  chart.append("path")
-      .datum(data1)
-      .attr("class", "line2")
-      .attr("d", line2);
-
-  // append line3 to the graph
-  chart.append("path")
-      .datum(data1)
-      .attr("class", "line3")
-      .attr("d", line3);
 
   // append the x axis with the correct data
   chart.append("g")

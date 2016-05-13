@@ -29,21 +29,7 @@ h2{
   stroke: steelblue;
   stroke-width: 1.5px;
 }
-.line2{
-	fill: none;
-  stroke: green;
-  stroke-width: 1.5px;
-}
-.line3{
-	fill: none;
-  stroke: red;
-  stroke-width: 1.5px;
-}
+
 g {
     pointer-events: all;
-}
-.buttons{
-	text-align: center;
-}
-
 }
