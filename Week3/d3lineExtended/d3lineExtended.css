@@ -1,0 +1,49 @@
+/*Thom Mekelenkamp*/
+
+h1{
+	text-align: center;
+	font-family: arial;
+}
+h2{
+	text-align: center;
+	font-family: arial;
+}
+.text{
+	font-family: arial;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: arial;
+	font-size: 11px;
+}
+
+.line{
+	fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.line2{
+	fill: none;
+  stroke: green;
+  stroke-width: 1.5px;
+}
+.line3{
+	fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}
+g {
+    pointer-events: all;
+}
+.buttons{
+	text-align: center;
+}
+
+}
