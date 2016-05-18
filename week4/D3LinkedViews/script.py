@@ -6,11 +6,11 @@ import csv
 import json
 
 # define data file and output file
-csvfile = open('data2.csv', 'r')
-jsonfile = open('data2.json', 'w')
+csvfile = open('data.csv', 'r')
+jsonfile = open('data.json', 'w')
 
 # define field names for jason file
-fieldnames = ("date","gem","min","max")
+fieldnames = ("country","symbol","sqkm","pop","users","penetration")
 reader = csv.DictReader( csvfile, fieldnames)
 # read through file and split in separate lines + a ","
 for row in reader:
