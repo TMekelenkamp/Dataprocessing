@@ -1,3 +1,14 @@
 .map{
   defaultFill: 'rgba(115,115,115,0.9)';
 }
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.legend {                                                   /* NEW */
+  font-size: 12px;                                          /* NEW */
+}                                                           /* NEW */
+rect {                                                      /* NEW */
+  stroke-width: 2;                                          /* NEW */
+}
