@@ -48,8 +48,21 @@ var map = new Datamap({element: document.getElementById('map'),
   data: dataList,
   done: function(datamap) {
     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-        d3.select(".chart").remove();
-        pie(findCountry(countries, geography.properties.name), dataList);
+      pie(findCountry(countries, geography.properties.name), dataList);
+      // var count = 0;
+      // if (count = 0)
+      // {
+      //   count += 1;
+      //   console.log(count);
+      //   pie(findCountry(countries, geography.properties.name), dataList);
+      // }
+      // else if(count >= 1){
+      //   console.log('else');
+      //   console.log(document.getElementById('.chart'))
+      //   update(findCountry(countries, geography.properties.name), dataList);
+
+      // }
+
             });
         },
   geographyConfig:{
@@ -78,6 +91,7 @@ var map = new Datamap({element: document.getElementById('map'),
 
 
  function pie(code, dataList){
+
  (function(d3) {
    'use strict';
 
@@ -133,9 +147,9 @@ var map = new Datamap({element: document.getElementById('map'),
        var horz = -2 * legendRectSize;                       // NEW
        var vert = i * height - offset;                       // NEW
        return 'translate(' + horz + ',' + vert + ')';        // NEW
-     });                                                     // NEW
-
-   legend.append('rect')                                     // NEW
+     });
+                                                // NEW
+   legend.append('rect')                                                               // NEW
      .attr('width', legendRectSize)                          // NEW
      .attr('height', legendRectSize)                         // NEW
      .style('fill', color)                                   // NEW
@@ -148,5 +162,6 @@ var map = new Datamap({element: document.getElementById('map'),
 
  })(window.d3);
 }
+
 
  });
