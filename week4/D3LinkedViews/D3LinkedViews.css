@@ -1,3 +1,4 @@
+/*Thom Mekelenkamp*/
 .map{
   defaultFill: 'rgba(115,115,115,0.9)';
 }
@@ -5,10 +6,40 @@
   font: 10px sans-serif;
   text-anchor: middle;
 }
-
-.legend {                                                   /* NEW */
-  font-size: 12px;                                          /* NEW */
-}                                                           /* NEW */
-rect {                                                      /* NEW */
-  stroke-width: 2;                                          /* NEW */
+.legend {
+  font-size: 12px;
+}
+rect {
+  stroke-width: 2;
+}
+h1, h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+div1
+{
+  font-weight: bold;
+  color: #d6e8f5;
+}
+div2
+{
+  font-weight: bold;
+  color: #aed1ea;
+}
+div3
+{
+  font-weight: bold;
+  color: #85bae0;
+}
+div4
+{
+  font-weight: bold;
+  color: #5da3d5;
+}
+div5
+{
+  font-weight: bold;
+  color: #348ccb;
 }

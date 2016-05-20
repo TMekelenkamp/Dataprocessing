@@ -2,18 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <h1>Internet shit</h1>
   <h2>Thom Mekelenkamp - 11167998</h2>
+  <p>World population for each country in the world in relation with the number of internet users</p>
+  <p>Data source: http://www.internetworldstats.com/stats.htm </p>
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" data-semver="3.0.1" data-require="normalize@*" />
-  <script data-require="d3@*" data-semver="3.4.6" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <script src="/datamaps.world.min.js"></script>
-  <div id="map" style="position: relative; width: 1280px; height: 720px;"></div>
+  <link rel="stylesheet" type="text/css" href="D3LinkedViews.css"/>
   <script src="D3LinkedViews.js" charset="utf-8"></script>
-
 </head>
 <body>
-  <div id="chart"></div>
+  <div>
+  <input id="button1" style="position: left;" type="submit" name="button1" value="Remove donuts" onclick="removeDonut();" />
+  <div>
+  <div0>Population numbers: </div0><div1>< 1.000.000  |</div1><div2> < 10.000.000 | </div2><div3> < 25.000.000 | </div3><div4> < 50.000.000 | </div4><div5> > 50.000.000</div5>
+  <div id="legend"></div>
+  <div id="map" style="position: center; width: 1280px; height: 720px;"></div>
+  <div id="chart" style= "margin-top: 100px; margin-right: 40px; margin-bottom: 10px; margin-left: 70px"; ></div>
 </body>
 </html>
