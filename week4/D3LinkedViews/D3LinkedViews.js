@@ -44,7 +44,7 @@ var map = new Datamap({element: document.getElementById('map'),
         data3: '85bae0',
         data4: '5da3d5',
         data5: '348ccb',
-        defaultFill: 'rgba(115,115,115,0.9)' // Any hex, color name or rgb/rgba value
+        defaultFill: 'rgba(115,115,115,0.9)'
     },
     data: dataList,
     done: function(datamap) {
@@ -61,9 +61,8 @@ var map = new Datamap({element: document.getElementById('map'),
             ' <br/>Surface in Km2: ' + dataList.sqkm +
 		        ' </div>'
 	      },
-    }
-});
-
+      }
+  });
 
 
 function findCountry(array, value){
