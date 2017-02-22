@@ -85,6 +85,7 @@ function donut(code, dataList){
         { label: 'users', count: dataList[code].users },
         { label: 'population', count: dataList[code].population },
       ];
+
     // define the sizes of the donut
     var margin = {top: 50, right: 30, bottom: 30, left: 40}
     var width = 400;
